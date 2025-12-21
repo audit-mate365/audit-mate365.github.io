@@ -1,29 +1,52 @@
-# SOC 2 Evidence Collector (Linux)
+---
+title: Audit-Mate365
+description: Audit-Mate365 is a lightweight SOC 2 evidence collection tool for Linux systems. Collect audit-ready evidence in minutes, not weeks.
+---
 
-A lightweight tool to help companies quickly collect Linux system evidence for SOC 2 Type I audits.
+# Audit-Mate365
+
+Audit-Mate365 is a lightweight, self-hosted SOC 2 evidence collection tool for Linux systems.
+
+It helps companies preparing for SOC 2 audits quickly collect audit-ready evidence without SaaS subscriptions, agents calling home, or complex platforms.
 
 ---
 
-## Why This Exists
+## What it does
 
-Preparing for a SOC 2 audit is tedious. This tool simplifies Linux evidence collection, saving time and reducing errors. Ideal for startups, small teams, or internal IT auditors.
+Audit-Mate365 runs locally on your Linux servers and collects commonly requested SOC 2 evidence, including:
 
----
+- System and OS information
+- User and account configuration
+- SSH configuration and access controls
+- Firewall rules and status
+- Installed packages
+- Running services
+- Log configuration and retention indicators
 
-## Who This Is For
-
-- Startups preparing for their first SOC 2 audit
-- IT teams handling Linux servers
-- Consultants assisting companies with SOC 2 readiness
-
----
-
-## Interested?
-
-Email **audit-mate@proton.me** to get early access, request a demo, or ask about pricing.
+All evidence is exported into a structured archive that can be shared directly with auditors.
 
 ---
 
-## Licensing
+## Who it’s for
 
-This tool is licensed per company. Contact us for details.
+- Startups preparing for a SOC 2 Type 1 audit  
+- Small teams that want audit evidence without expensive compliance platforms  
+- Companies that prefer self-hosted tools and simple workflows  
+
+---
+
+## Why Audit-Mate365
+
+- No SaaS lock-in
+- No agents calling external servers
+- Runs locally on your infrastructure
+- Simple, fast, and audit-focused
+- Built specifically for SOC 2 evidence collection
+
+---
+
+## Get in touch
+
+If you’re preparing for a SOC 2 audit and want early access, feedback, or pricing details:
+
+**Email:** audit-mate@proton.me
