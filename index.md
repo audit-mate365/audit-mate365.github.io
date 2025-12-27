@@ -1,7 +1,3 @@
----
-title: AuditMate
-description: Complete System Auditing for Linux
----
 
 # AuditMate – Complete System Auditing for Linux
 
