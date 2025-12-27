@@ -1,82 +1,187 @@
----
-title: Audit-Mate365
-description: Automated SOC 2 evidence collection for Linux systems. Generate auditor-ready evidence in minutes, not weeks.
----
+AuditMate — What It Does (Current State)
 
-# Automated SOC 2 Evidence Collection for Linux
+AuditMate is a lightweight, local system auditing tool for Linux servers and machines.
+It performs security and configuration checks, tracks changes over time, and supports automated scans via cron — without requiring agents, cloud access, or subscriptions.
 
-**Audit-Mate365** is a lightweight, self-hosted tool that collects **auditor-ready SOC 2 evidence** from Linux systems — without SaaS platforms, agents, or weeks of manual work.
+Core Capabilities
+1. System Auditing
 
-Run one command. Get a clean evidence archive your auditor can review immediately.
+AuditMate collects:
 
----
+Hostname, OS, kernel, uptime
 
-## What problem this solves
+Admin users and regular users
 
-SOC 2 audits stall because Linux evidence is:
-- Scattered across servers
-- Manually collected with screenshots and commands
-- Different every time an auditor asks for it
+Running services
 
-Audit-Mate365 standardizes and automates this process.
+Installed package count
 
----
+Open network ports
 
-## What it does
+Firewall status
 
-Audit-Mate365 runs locally on your Linux systems and collects commonly requested SOC 2 Type 1 evidence, including:
+Available system updates
 
-- System and OS details
-- User and account configuration
-- SSH configuration and access controls
-- Firewall rules and status
-- Installed packages
-- Running services
-- Log configuration and retention indicators
+All data is collected locally.
 
-All evidence is packaged into a **structured archive** designed for auditor review.
+2. Warnings & Risk Detection
 
-No dashboards. No cloud uploads. Just evidence.
+AuditMate flags common security issues, including:
 
----
+SSH port 22 open
 
-## Who it’s for
+Firewall inactive or disabled
 
-- SaaS startups preparing for **SOC 2 Type 1**
-- Small teams without compliance staff
-- Engineers tired of copy-pasting commands for auditors
-- Companies that want **self-hosted, auditable tools**
+Multiple admin users
 
----
+Pending system updates
 
-## Why Audit-Mate365
+Warnings are clearly printed in the terminal.
 
-- **No SaaS subscriptions**
-- **No agents calling home**
-- **Runs entirely on your infrastructure**
-- **Designed around auditor requests**
-- **Fast to run, easy to repeat**
+3. Baseline Tracking & Change Detection
 
----
+On first run, AuditMate saves a baseline snapshot
 
-## How auditors use it
+On subsequent runs, it compares the current system state against the baseline
 
-You provide your auditor with:
-- A timestamped evidence archive
-- Consistent file structure
-- Clear system outputs (no screenshots)
+Differences are displayed clearly (added/removed users, services, ports, etc.)
 
-Auditors review. You move on.
+This allows users to:
 
----
+Detect unexpected changes
 
-## Early access
+Monitor drift over time
 
-Audit-Mate365 is currently in early access.
+Validate system hardening
 
-If you’re preparing for a SOC 2 audit and want:
-- Early access
-- Feedback influence
-- Pricing details
+4. Exit Codes for Automation
 
-**Email:** audit-mate@proton.me
+AuditMate exits with meaningful codes:
+
+0 → No warnings
+
+1 → Non-critical warnings
+
+2 → Critical security issues
+
+This makes it automation-friendly for:
+
+cron
+
+CI/CD
+
+monitoring scripts
+
+5. Scheduled Scans (Cron Automation)
+
+AuditMate includes helper scripts that let users:
+
+Schedule scans daily, hourly, weekly, yearly, or every X minutes
+
+Schedule multiple times per day
+
+Use 12-hour (AM/PM) format
+
+Preview schedules with a dry-run
+
+View a human-readable cron summary
+
+No cron knowledge required.
+
+6. Licensing (Local, Offline)
+
+AuditMate supports:
+
+Signed license files
+
+Offline verification using public/private key cryptography
+
+Feature gating (e.g., JSON export for paid users)
+
+No online checks, no tracking, no phone-home behavior.
+
+7. Reports
+
+Human-readable terminal output
+
+Optional JSON report export (paid feature)
+
+Logs saved automatically for automated runs
+
+🎯 What AuditMate Is Designed For
+
+Personal servers
+
+Homelabs
+
+Small businesses
+
+Developers
+
+Security-conscious admins
+
+Environments without cloud access
+
+🚫 What AuditMate Does NOT Do
+
+No agents
+
+No telemetry
+
+No remote control
+
+No forced updates
+
+No SaaS dependency
+
+🔮 Optional Future Features (Not Required)
+
+These are nice-to-have, not necessary for v1.
+
+Short-Term Enhancements
+
+Configurable warning thresholds
+
+Custom ignore rules
+
+Severity levels per warning
+
+Better formatted reports (Markdown / HTML)
+
+Medium-Term
+
+Per-server licensing (optional)
+
+Baseline history (not just latest)
+
+Export diffs as JSON
+
+Web dashboard (local-only)
+
+Long-Term / v2 Ideas
+
+Agent mode
+
+Centralized dashboard
+
+Email / webhook alerts
+
+Fleet management
+
+Role-based access
+
+Update channels
+
+🧠 Bottom Line
+
+AuditMate is:
+
+Simple
+
+Offline-friendly
+
+Automation-ready
+
+Non-intrusive
+
+Predictable
