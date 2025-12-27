@@ -77,7 +77,7 @@ Warnings are categorized as **critical** or **non-critical**.
 | Free Tier | $0 | Core scanning & baseline features, offline support |
 | Monthly | $25 | Full premium features |
 | Yearly | $250 | Full premium features |
-| Early Access / Founding Member | $50 first 100 | Price locked for life |
+| Early Access / Founding Member | $200 first 100 | Price locked for life |
 
 For early access or to become a founding member, **contact:** [audit-mate@proton.me](mailto:audit-mate@proton.me)
 
